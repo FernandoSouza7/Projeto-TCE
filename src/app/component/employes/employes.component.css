@@ -1,0 +1,35 @@
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+H1{
+    font-weight: bold;
+    color: blue;
+}
+body{
+    display: flex;
+    margin-top: 5vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+}
+/*vou pegar as cores la no figma e colocar aqui pra a gente ir usando
+TRANQUILO!
+Mas a gente so vai usar o preto, cinza e o azul,
+é pra fazer só o "miolo da pagina", a barra lateral vai ser incluida em todas depois.
+
+*/
+
