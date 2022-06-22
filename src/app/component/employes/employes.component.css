@@ -4,11 +4,46 @@
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
 }
-H1{
+.titulo{
     font-weight: bold;
-    color: blue;
+    color: #007dc5;
 }
+span{
+    color: rgba(0, 0, 0, 0.452);
+    font-size: 15px;
+}
+.input-group{
+ 
+    width: 90%;
+    height: 25px;
+    margin-bottom: 5vh;
+    border-radius: 0%;
+
+}
+.input-button{
+    width: 30px;
+    border: 0.5px solid rgb(231, 231, 231);
+    color: rgb(92, 92, 92);
+    background-color: white;
+    border-right: none;
+}
+.input-search{
+    font-size: 10px;
+    border: 0.5px solid rgb(231, 231, 231);
+    padding-left: 5px;
+    width: 25%;
+    border-left: none;
+}
+
 body{
+    display: flex;
+}
+.barra-lateral{
+    width: 30%;
+    background-color: #f2388f;
+}
+.associados{
+    width: 70%;
     display: flex;
     margin-top: 5vh;
     align-items: center;
@@ -17,19 +52,8 @@ body{
 
 .principal{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
 }
 
-.line{
-    display: flex;
-    align-items: center;
-}
-/*vou pegar as cores la no figma e colocar aqui pra a gente ir usando
-TRANQUILO!
-Mas a gente so vai usar o preto, cinza e o azul,
-é pra fazer só o "miolo da pagina", a barra lateral vai ser incluida em todas depois.
-
-*/
 
