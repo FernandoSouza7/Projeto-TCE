@@ -3,22 +3,23 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .sidebar {
     position: fixed;
-    width: 250px;
+    width: 20%;
     top: 0;
     right: 0; /*altera o lado do sidebar*/
     bottom: 0;
     padding: 50px;
-    background-color: #F2388F;
+    background-color: #F2388f;
 }
 
 img {
     width: 270px;
     height: 140px;
-
+    margin-bottom: 20px;
 }
 
 .sidebar a {
@@ -28,10 +29,40 @@ img {
     text-decoration: none;
     font-family: 'Roboto' sans-serif;
     letter-spacing: 2px;
+    font-size: 16px;
+}
+
+/*underline*/
+a::after {
+    content: '';
+    width: 120%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.sidebar a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+span {
+    margin-right: 8px;
+    font-size: 25px;
 }
 
 .sidebar a:hover {
     color: #ccc;
     margin-left: 20px;
     transition: 0.4s;
+}
+
+#exit {
+    position: relative;
+    top: 250px;
+    left: 225px;
+    font-size: 20px;
+}
+
+#iconExit {
+    font-size: 18px;
 }

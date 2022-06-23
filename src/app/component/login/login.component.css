@@ -27,6 +27,8 @@
     background-color: #F2388F;
 }
 
+
+
 .content-box {
     display: flex;
     justify-content: center;
@@ -78,4 +80,3 @@
     color: #32324f;
     background-color: #ecf2f7;
 }
-

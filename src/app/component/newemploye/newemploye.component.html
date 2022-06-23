@@ -1,44 +1,54 @@
-<div class="main-container">
-    <h1>Disponibilidade</h1>
-    <div class="container">
-        <div class="employeeInfos">
-            <label for="">Id Tcs:</label>
-            <input type="number" name="idTcs" id="idtcs" placeholder="Digite seu ID Tcs">
-        </div>
-        
-        <div class="employeeInfos">
-            <label for ="">Associado: </label>
-            <input type="text" name="associate" id ="idassociate" placeholder = "Digite seu nome">
-        </div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="main-container">
+    <div class="form">
+        <h1>Disponibilidade</h1>
+        <form action="#">
+            <div class="form-header">
+                <div class="input-group">
+                    <div class ="input-box">
+                        <label for="idtcs">Id Tcs:  </label>
+                        <input type="number" name="idtcs" id="idtcs" placeholder="Digite seu ID Tcs" request>
+                    </div>
 
-        <div class="employeeInfos">
-            <label for="">Celular:</label>
-            <input type="number" name="cell" id="idcell" placeholder="Digite seu número">
-        </div>
-        
-        <div class="employeeInfos">
-            <label for="">Data disponível:</label>
-            <input type="datetime" name="dateAvailable" id="iddateAvailable">
-        </div>
+                    <div class="input-box">
+                        <label for ="associate">Associado:  </label>
+                        <input type="text" name="associate" id ="associate" placeholder = "Digite seu nome" request>
+                    </div>
+            
+                    <div class="input-box">
+                        <label for="cell">Celular:  </label>
+                        <input type="tel" name="cell" id="cell" placeholder="(xx) xxxxx-xxxx" request>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="dateAvailable">Data disponível:  </label>
+                        <input type="date" name="dateAvailable" id="dateAvailable">
+                    </div>
+            
+                    <div class="input-box">
+                        <label for="manager">Gestor:  </label>
+                        <input type="text" name="manager" id="manager" placeholder="Digite o nome do Gestor" request>
+                    </div>
+            
+                    <div class="input-box">
+                        <label for="project">Projeto:  </label>
+                        <input type="text" name="project" id="project" placeholder="Informe a qual projeto está alocado" request>
+                    </div>
+                    
+                   <div class="input-box">
+                        <label for="email">Email:  </label>
+                        <input type="email" name="email" id="email" placeholder="email@exemplo.com">
+                    </div>            
+                </div>
+            </div>
 
-        <div class="employeeInfos">
-            <label for="">Gestor</label>
-            <input type="text" name="manager" id="idmanager" placeholder="Digite o nome do Gestor">
+            <div class="buttomtosave">
+                <input type="submit" name="buttomtosave" value="Salvar" id="buttomtosave">
         </div>
-
-        <div class="employeeInfos">
-            <label for="">Projeto:</label>
-            <input type="text" name="project" id="idproject" placeholder="Informe a qual projeto está alocado">
-        </div>
-        
-        <div class="employeeInfos">
-            <label for="">Email:</label>
-            <input type="email" name="email" id="idemail" placeholder="email@exemplo.com">
-        </div>
-        <div class="employeeInfos">
-            <input type="submit" name="butom" value="Salvar" id="tosaveButton">
+    
+        </form>
     </div>
 </div>
-
-
-
+</body>
+        
