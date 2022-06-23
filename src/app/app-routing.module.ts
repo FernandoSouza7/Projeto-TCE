@@ -4,6 +4,7 @@ import { EmployesComponent } from './component/employes/employes.component';
 import { LoginComponent } from './component/login/login.component';
 import { NewemployeComponent } from './component/newemploye/newemploye.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { InterviewPageComponent } from './component/interview-page/interview-page.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path : 'sidebar',
     component: SidebarComponent
+  },
+  {
+    path : 'interview-page',
+    component: InterviewPageComponent
   }
 ];
 

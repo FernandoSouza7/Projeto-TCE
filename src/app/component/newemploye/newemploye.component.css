@@ -24,11 +24,10 @@ h1{
     padding-top: 70px;
     padding-bottom:30px;
     color: #4D2F9E;
-    font-weight: bold;
    
 }
 .form {
-    width: 70%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +78,12 @@ h1{
 .input-box input::placeholder {
     color:  #717171;
 }
-
+.specialty-chips label h4{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+    margin: 70px;
+}
 .buttomtosave{
     align-items: center;
     text-align: center;
@@ -98,7 +102,6 @@ h1{
 #buttomtosave:hover {
     background-color: #e6589a;
 }
-/*tornar responsivo*/
 @media screen and (max-width: 900px) {
     .main-container {
         width: 50%;

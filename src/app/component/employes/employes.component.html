@@ -1,3 +1,5 @@
+
+<!-- <app-sidebar></app-sidebar>  IMPORT DO SIDEBAR - MATHEUS--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,40 +10,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Associados</title>
+    <script>
+        
+    // JavaScript code pesquisa por competencia
+        function search_geral() {
+            let input = document.getElementById('searchbar').value
+            input=input.toLowerCase();
+            let x = document.getElementsByClassName('competenc');
+            
+            for (i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display="none";
+                }
+                else {
+                    x[i].style.display="list-item";                 
+                }
+            }
+        }
+
+    </script>
 </head>
 <body> 
+    <div class="barra-lateral"></div>
     <div class="associados">
-        <H1 class="titulo">Associados</H1>
+        <H1 class="titulo">Associados TCS</H1>
         <div class="input-group">
             <button class="input-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" class="input-search" placeholder="Pesquisar" >
+            <input type="text" class="input-search" id="searchbar" onkeyup="search_geral()" name="search" placeholder="Digite a competencia que procura" >
         </div>
         
     
-        <div class="principal">
-            <ul>
-                <li>
+        <div class="principal" *ngFor="let employe of employelist">
                     
                     <hr class=line size="1" width="100%" noshade>
                     <div div class="d-flex w-100 justify-content-between">
-                        <h1 class="mb-1">Name Employer</h1>
+                        <h1 class="mb-1">{{employe.name}}</h1>
                         <small>Itau Torre 3</small>
                     </div>
-                    <span>Angular .Net</span>
-                </li>
-                <li>
-        
-                    <hr class=line size="1" width="100%" noshade>
-                    <div div class="d-flex w-100 justify-content-between">
-                        <h1 class="mb-1">Name Employer</h1>
-                        <small>Itau Torre 3</small>
-                    </div>
-                    <span>Angular .Net</span>
-                </li>
-            </ul>
+                    <span class="competenc">Angular .Net</span>
+                    
         </div>
     </div>
-    <div class="barra-lateral"></div>
+    
 
 </body>
 </html>

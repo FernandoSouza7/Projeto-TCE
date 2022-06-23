@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployesModule } from 'src/app/models/employes/employes.module';
+import { EmployesService } from 'src/app/services/employes.service';
 
 @Component({
   selector: 'app-employes',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployesComponent implements OnInit {
 
-  constructor() { }
+  employelist: EmployesModule[] = [];
+
+  constructor(private employeservice: EmployesService) { }
 
   ngOnInit(): void {
+    this.findAll();
+
   }
+
+  findAll():void{
+    this.employeservice.findAll().subscribe((response) => {
+      this.employelist = response;
+    })
+  }
+
 
 }

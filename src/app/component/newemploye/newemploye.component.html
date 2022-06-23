@@ -3,17 +3,17 @@
     <div class="main-container">
     <div class="form">
         <h1>Disponibilidade</h1>
-        <form action="#">
+        <form action="" method="post">
             <div class="form-header">
                 <div class="input-group">
                     <div class ="input-box">
                         <label for="idtcs">Id Tcs:  </label>
-                        <input type="number" name="idtcs" id="idtcs" placeholder="Digite seu ID Tcs" request>
+                        <input [(ngModel)]="employe.id" type="number" name="idtcs" id="idtcs" placeholder="Digite seu ID Tcs" request>
                     </div>
 
                     <div class="input-box">
                         <label for ="associate">Associado:  </label>
-                        <input type="text" name="associate" id ="associate" placeholder = "Digite seu nome" request>
+                        <input [(ngModel)]="employe.name" type="text" name="associate" id ="associate" placeholder = "Digite seu nome" request>
                     </div>
             
                     <div class="input-box">
@@ -43,8 +43,12 @@
                 </div>
             </div>
 
+ 	   <hr class = line size="1" width="100%" noshade ="">
+            <div class="specialty-chips">
+                <label for="specialty">Especialidades: </label>
+            </div>
             <div class="buttomtosave">
-                <input type="submit" name="buttomtosave" value="Salvar" id="buttomtosave">
+                <input  (click)="create()" type="submit" name="buttomtosave" value="Salvar" id="buttomtosave">
         </div>
     
         </form>
