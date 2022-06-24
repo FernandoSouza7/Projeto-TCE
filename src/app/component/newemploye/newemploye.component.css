@@ -21,10 +21,10 @@ body {
 }
 
 h1{
-    padding-top: 250px;
+    padding-top: 450px;
     padding-bottom:30px;
     color: #007dc5;
-   
+    
 }
 .form {
     width: 75%;
@@ -32,7 +32,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 5rem;
     
 }
 .form-header {
@@ -57,7 +57,7 @@ h1{
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
-    width: 400px;
+    width: 375px;
     margin: 15px 0;
 
 }
@@ -80,9 +80,54 @@ h1{
 }
 .specialty-chips label h4{
     font-size: 0.75rem;
+    font-weight: 700;
+    color: #000000c0;
+}
+.specialty-chip-list {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+  }
+  .input-coments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+} 
+  .coments-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;  
+  }
+  .coments-box input {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 750px;
+    height: 70px;
+    margin: 15px 0;
+
+}
+.coments-box input:hover {
+    background-color: #ecf2f7;;
+}
+
+.coments-box input:focus-visible {
+    outline: 1px solid #F2388F;;
+}
+
+.coments-box label h4 {
+    font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
-    margin: 70px;
+}
+
+.coments-box input::placeholder {
+    color:  #717171;
 }
 .buttomtosave{
     align-items: center;
@@ -111,6 +156,3 @@ h1{
     }
 }
 
-.example-chip-list {
-    width: 100%;
-  }

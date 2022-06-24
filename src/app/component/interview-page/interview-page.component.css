@@ -5,19 +5,23 @@
     font-size: 17px;
 }
 .titulo{
-    font-weight: bold;
     color: #007dc5;
 }
 body{
     display: flex;
 
 }
+
 .associados{
     width: 75%;
     display: flex;
     margin-top: 5vh;
     align-items: center;
     flex-direction: column;
+}
+.mb-1{
+    margin-bottom: 5vh;
+    font-weight: bold;
 }
 .part1{
     display: flex;
@@ -39,7 +43,10 @@ body{
 #edit{
     color: red;
 }
-.btn{
+button:hover{
+    background-color: #007dc5;
+}
+button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +58,11 @@ body{
     border-radius: 3px;
     padding: 15px;
     font-size: 12px;
+    
+   
 
 } 
-.buttonsredgreen{
+.bot{
     display: flex;
     gap: 20px;
     margin-top: 25px;

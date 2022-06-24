@@ -4,5 +4,54 @@
 }
 
 .container {
-    margin: 2% 0 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 0 50px;
+    width: 67%;
+    justify-content: center;
+}
+
+hr {
+    color: #ccc;
+}
+
+.pageName {
+    margin-left: 30%;
+    margin-top: 40px;
+    color: #0477BF;
+    font-weight: bold;
+    width: 50%;
+}
+
+.userName {
+    font-weight: 500;
+}
+
+.infos {
+    display: flex;
+    align-items: row;
+    font-weight: 400;
+}
+
+.companyInfos {
+    color: #717171;
+}
+
+.employeeInfo {
+    margin-left: 50px;
+    font-style: bold;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons a{
+    margin: 15px;
+    color: black;
+    font-size: 15px;
+}
+
+#penEdit {
+    color: red;
 }

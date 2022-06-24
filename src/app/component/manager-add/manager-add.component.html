@@ -1,52 +1,79 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Barra lateral para ver como fica na pagina -->
+<app-sidebar></app-sidebar>
+
 <body>
-    <div class="container">
+  <div class="container">
     <div class="form">
-        <h1>Gestores</h1>
-        
-        <form action="" method="post">       
-            <div class="form-header">
+      <h1>Gestores</h1>
 
-                <div class="input-group">
-
-                    
-                    <div class ="input-box">
-                        <label for="idtcs">Id Tcs:  </label>
-                        <input type="number" name="idtcs" id="idmanager" placeholder="Digite seu ID Tcs" request>
-                    </div>
-
-                    <div class="input-box">
-                        <label for ="associate">Gestor:  </label>
-                        <input type="text" name="gestor" id ="manager" placeholder = "Digite seu nome" request>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="cell">Celular:  </label>
-                        <input type="tel" name="cell" id="cell" placeholder="(xx) xxxxx-xxxx" request>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="project">Projeto:  </label>
-                        <input type="text" name="project" id="project" placeholder="" request>
-                    </div>
-                    
-                   <div class="input-box">
-                        <label for="email">Email:  </label>
-                        <input type="email" name="email" id="email" placeholder="">
-                    </div>
-
-
-
-
-                    <div class="input-box">
-                        <label for="email">Email:  </label>
-                        <input type="email" name="email" id="email" placeholder="">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="email">Email:  </label>
-                        <input type="email" name="email" id="email" placeholder="">
-                    </div>
-
-                </div>
+      <form action="" method="post">
+        <div class="form-header">
+          <div class="input-group">
+            <div class="input-box">
+              <label for="idtcs">Id Tcs: </label>
+              <input
+                type="number"
+                name="idtcs"
+                id="idmanager"
+                placeholder="Digite seu ID Tcs"
+                request
+              />
             </div>
+
+            <div class="input-box">
+              <label for="associate">Gestor: </label>
+              <input
+                type="text"
+                name="gestor"
+                id="manager"
+                placeholder="Digite seu nome"
+                request
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="cell">Celular: </label>
+              <input
+                type="tel"
+                name="cell"
+                id="cell"
+                placeholder="(xx) xxxxx-xxxx"
+                request
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="project">Projeto: </label>
+              <input
+                type="text"
+                name="project"
+                id="project"
+                placeholder=""
+                request
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" placeholder="" />
+            </div>
+
+            <div class="input-box">
+              <label for="X">Perfil: </label>
+              <input type="radio" name="Gestor" id="x" />
+              <input type="radio" name="Adm" id="x" />
+            </div>
+
+            <div class="input-box">
+              <label for="X">Status: </label>
+              <input type="radio" name="Ativo" id="x" />
+              <input type="radio" name="inativo" id="x" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

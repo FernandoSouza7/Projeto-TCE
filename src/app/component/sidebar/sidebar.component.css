@@ -57,23 +57,3 @@ span {
 }
 
 /***Ver a questão da responsividade da sidebar depois de estar como component em outras páginas** */
-
-@media only screen and (max-width: 600px) {
-    .sidebar {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .sidebar a {
-        display: block;
-        padding: 15px 20px;
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Roboto' sans-serif;
-        letter-spacing: 2px;
-        font-size: 16px;
-    }
-  } 
