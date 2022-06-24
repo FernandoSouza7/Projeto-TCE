@@ -7,10 +7,11 @@
 }
 
 .sidebar {
-    position: fixed;
+    position:fixed;
     width: 20%;
     top: 0;
-    right: 0; /*altera o lado do sidebar*/
+    right: 0;
+     /*altera o lado do sidebar*/
     bottom: 0;
     padding: 50px;
     background-color: #F2388f;
@@ -46,14 +47,16 @@ span {
 
 #exit {
     position: relative;
-    top: 30%;
-    left: 250px;
+    top: 40%;
+    left: 300px;
     font-size: 20px;
 }
 
 #iconExit {
     font-size: 18px;
 }
+
+/***Ver a questão da responsividade da sidebar depois de estar como component em outras páginas** */
 
 @media only screen and (max-width: 600px) {
     .sidebar {
@@ -73,4 +76,4 @@ span {
         letter-spacing: 2px;
         font-size: 16px;
     }
-  }
+  } 
