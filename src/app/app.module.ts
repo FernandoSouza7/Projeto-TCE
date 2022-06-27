@@ -29,6 +29,14 @@ import {MatChipsModule} from '@angular/material/chips';
 import { AssociateComponent } from './component/associate/associate.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { FilteNamePipe } from './Pipes/filte-name.pipe';
+import { InterviewsComponent } from './component/interviews/interviews.component';
+import { FilterRemarkPipe } from './Pipes/filter-remark.pipe';
+import {MatSelectModule} from '@angular/material/select';
+import { FilterInterviewPipe } from './Pipes/filter-interview.pipe';
+import { AccountComponent } from './component/account/account.component';
+import { EditManagerComponent } from './component/edit-manager/edit-manager.component';
 
 
 
@@ -45,6 +53,12 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     AllAvailabilityComponent,
     ManagerComponent,
     AssociateComponent,
+    FilteNamePipe,
+    InterviewsComponent,
+    FilterRemarkPipe,
+    FilterInterviewPipe,
+    AccountComponent,
+    EditManagerComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +74,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+    MatSidenavModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

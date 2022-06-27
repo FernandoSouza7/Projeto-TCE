@@ -16,9 +16,23 @@ export class EmployesService {
   findAll() : Observable<EmployesModule[]>{
     return this.http.get<EmployesModule[]>(`${this.baseUrl}/employee`);
   }
+
+  findById(id: number) : Observable<EmployesModule>{
+    return this.http.get<EmployesModule>(`${this.baseUrl}/employee/${id.toString()}`);
+  }
   
 
   create(employe: EmployesModule): Observable<EmployesModule>{
     return this.http.post<EmployesModule>(`${this.baseUrl}/employee/create`, employe)
   }
+
+  searchByName(name: String) : Observable<EmployesModule[]>{
+    return this.http.get<EmployesModule[]>(`${this.baseUrl}/employee/filter/name/${name}`);
+  }
+
+  update(employe : EmployesModule): Observable<EmployesModule>{
+    return this.http.put<EmployesModule>(`${this.baseUrl}/employee/${employe.id}`, employe);
+  }
+  
+
 }

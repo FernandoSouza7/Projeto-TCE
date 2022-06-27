@@ -4,10 +4,12 @@
 <app-sidebar></app-sidebar>
 
 <body>
+
+  <title>Gestores</title>
+
   <div class="container">
     <div class="form">
-      <h1>Gestores</h1>
-
+    
       <form action="" method="post">
         <div class="form-header">
           <div class="input-group">
@@ -23,7 +25,7 @@
             </div>
 
             <div class="input-box">
-              <label for="associate">Gestor: </label>
+              <label for="gestor">Gestor: </label>
               <input
                 type="text"
                 name="gestor"
@@ -60,18 +62,31 @@
               <input type="email" name="email" id="email" placeholder="" />
             </div>
 
-            <div class="input-box">
+            <hr class=line size="1" width="100%" noshade  style="margin-top: 7px; margin-bottom: 7px;">
+
+            <div class="input-radio">
               <label for="X">Perfil: </label>
               <input type="radio" name="Gestor" id="x" />
-              <input type="radio" name="Adm" id="x" />
             </div>
 
-            <div class="input-box">
+            <div class="input-radio">
               <label for="X">Status: </label>
               <input type="radio" name="Ativo" id="x" />
-              <input type="radio" name="inativo" id="x" />
+            </div>
+            <div class="input-radio">
+              <label for="X">Perfil: </label>
+              <input type="radio" name="Gestor" id="x" />
+            </div>
+
+            <div class="input-radio">
+              <label for="X">Status: </label>
+              <input type="radio" name="Ativo" id="x" />
             </div>
           </div>
+        </div>
+
+        <div class="buttomtosave">
+          <input  type="submit" name="buttomtosave" value="Salvar" id="buttomtosave">
         </div>
       </form>
     </div>

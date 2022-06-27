@@ -10,6 +10,7 @@ import { ManagerAddComponent } from './component/manager-add/manager-add.compone
 import { AllAvailabilityComponent } from './component/all-availability/all-availability.component';
 import { ManagerComponent } from './component/manager/manager.component';
 import { AssociateComponent } from './component/associate/associate.component';
+import { InterviewsComponent } from './component/interviews/interviews.component';
 
 
 const routes: Routes = [
@@ -52,7 +53,11 @@ const routes: Routes = [
   {
     path: 'associate',
     component: AssociateComponent
-  }
+  },
+  {
+    path: 'interviews',
+    component: InterviewsComponent 
+  },
 
 ];
 

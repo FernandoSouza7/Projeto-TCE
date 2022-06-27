@@ -1,30 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,500&display=swap');
-* {
-    margin: 0;
+* { margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Robot', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
 }
-
-body {
-    width: 100%;
-    height: 100vh;
+body{
     display: flex;
-    justify-content: center;
+}
+.manager-main{
+    width: 65%;
+    display: flex;
+    margin-top: 5vh;
     align-items: center;
-}
-.container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
+    flex-direction: column;
 }
 
-h1{
-    padding-top: 30px;
-    padding-bottom:30px;
+.title{
     color: #007dc5;
-    align-items: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+span{
+    font-size: 30px;
 }
 
+.input-group{
+    display: flex;
+    align-items: center;
+    margin: 20px 50px 0 50px;
+    width: 80%;
+    height: 35px;
+    margin-bottom: 5vh;
+    border-radius: 0%;
+}
+
+.input-button{
+    width: 30px;
+    border: 0.5px solid rgb(231, 231, 231);
+    margin: 5px 0;
+    background-color: #fff;
+    font-size: 1.7rem;
+    border-right: none;
+    cursor: pointer;
+    height: 100%;
+}
+.input-search{    
+    font-size: 13px;
+    border: 0.5px solid rgb(231, 231, 231);
+    padding-left: 5px;
+    width: 45%;
+    height: 100%;
+    border-left: none;
+}
+
+
+.input-search:hover {
+    background-color: #ecf2f7;;
+}
+
+.input-search:focus-visible {
+    outline: 1px solid #F2388F;;
+}
+
+.manager-list{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+.symbols{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 400;
+}
+.button-add-manager{
+    padding-left: 17px;
+    margin: 20px 50px 0 50px;
+    flex-direction: column;
+    width: 90%;
+}
+
+.button {
+    background-color: #e6589a;
+}
+.button{
+    background-color: #F2388F;
+    color: #fff;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    width: 150px;
+}
+
+.button:hover {
+    background-color: #e6589a;
+}
+@media(max-width: 700px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .manager-main{
+        width: 100%;
+    }  
+.input-search{
+    width: 90%;
+    }
+}

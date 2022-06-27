@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 0 50px;
+    width: 65%;
+    justify-content: center;
+}
+
+hr {
+    color: #ccc;
+}
+
+.pageName {
+    margin-left: 30%;
+    margin-top: 40px;
+    color: #0477BF;
+    width: 50%;
+}
+
+.userName {
+    font-weight: 500;
+}
+
+.infos {
+    display: flex;
+    align-items: row;
+    font-weight: 400;
+}
+
+.companyInfos {
+    color: #717171;
+}
+
+.employeeInfo {
+    margin-left: 50px;
+    font-style: bold;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons a{
+    margin: 15px;
+    color: black;
+    font-size: 15px;
+}
+
+#penEdit {
+    color: red;
+}
+.input-button{
+    width: 30px;
+    border: 0.5px solid rgb(231, 231, 231);
+    color: rgb(92, 92, 92);
+    background-color: white;
+    border-right: none;
+    height:100%;
+}
+
+.input-group{
+    width: 67%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 50px 0 50px;
+    width: 70%;
+    height: 35px;
+    margin-bottom: 5vh;
+    border-radius: 0%;
+}
+.input-search{
+    font-size: 13px;
+    border: 0.5px solid rgb(231, 231, 231);
+    padding-left: 5px;
+    width: 35%;
+    height: 95.5%;
+    border-left: none;
+}
+
+.selecionar{
+    width: 25%;
+    height: 100%;
+    margin-right: 20px;
+    border: 0.5px solid rgb(231, 231, 231);
+}
+.barra-lateral{
+    width: 50%;
+    background-color: #f2388f;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+.cont{
+    width: 100%;
+}
+@media screen and (max-width: 900px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-group{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pageName{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}

@@ -9,6 +9,11 @@ import {FormsModule, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {map, startWith} from 'rxjs/operators';
+import { LanguageModule } from "src/app/models/language/language.module"
+import { ProjectModule } from "src/app/models/project/project.module"
+import { ManagerModule } from 'src/app/models/manager/manager.module';
+import { CompetenceService } from 'src/app/services/competence.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-newemploye',
@@ -23,21 +28,45 @@ export class NewemployeComponent implements OnInit {
   allSpecialties: string[] = ['Angular', 'Assembly', 'AWS', 'Azure', 'C','C++', 'C#', 'Html', 'Java',
    'JavaScript', 'MySQL', '.NET', 'PHP', 'Phyton', 'Project Manager', 'Ruby', 'Scrum Master'];
 
+   status = false;
+
+  
+  manager: ManagerModule ={
+    id: 1,
+    name: "",
+    password: "",
+    phone: "",
+    email: "",
+    status: false
+  }
+   project: ProjectModule ={
+    name: "",
+    manager: this.manager
+  }
+
   employe : EmployesModule = {
     id: 0,
     name: '',
-    remark: false,
+    remark: true,
     grade: '',
     location: '',
     role: '',
     eng_lvl: '',
-    relocation: false
+    relocation: false,
+    skills: [],
+    languages: [],
+    project: this.project,
+    email: '',
+    phone: '', 
+    date_availability: '', 
   }
+
 
   @ViewChild('specialtyInput')
   specialtyInput!: ElementRef<HTMLInputElement>;
 
-  constructor(private employeservice: EmployesService, private _snackBar: MatSnackBar) {
+  constructor(private employeservice: EmployesService, private _snackBar: MatSnackBar, private competenceservice: CompetenceService,
+    private router: Router, private route: ActivatedRoute) {
     this.filteredSpecialties = this.specialtyCtrl.valueChanges.pipe(
       startWith(null),
       map((specialty: string | null) => (specialty ? this._filter(specialty) : this.allSpecialties.slice())),
@@ -47,11 +76,19 @@ export class NewemployeComponent implements OnInit {
   }
 
   create():void{
+    for (let index = 0; index < this.specialties.length; index++) {
+      this.employe.skills[index] = {
+        name: this.specialties[index],
+      }
     this.employeservice.create(this.employe).subscribe((response) =>{
       this.openSnackBar('Criado com sucesso');
+      this.router.navigate(["/availability"], { relativeTo: this.route });
     }, err =>{
       this.openSnackBar('Falha ao criar');
     }) 
+
+    }
+  
   
   }
   openSnackBar(text: string) {

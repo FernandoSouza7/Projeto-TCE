@@ -1,31 +1,49 @@
 <!-- Barra lateral para ver como fica na pagina -->
 <app-sidebar></app-sidebar>
-
+    <!-- CSS only -->
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-<h1 class="pageName">Todas Disponibilidades</h1>
-
-<div class="container">
-    <h1 class="userName">Maria da Silva</h1>
-
-    <div class="infos">
-        <div class="companyInfos">
-            <h3>Último projeto:</h3>
-            <h3>Gestor:</h3>
-            <h3>Especialidade:</h3>
+    <div class="conteudoo">
+        <h1 class="pageName">Todas Disponibilidades</h1>
+        
+        <div class="input-group">
+        
+                <select [ngModel]="selected" (ngModelChange)="onChange($event)" class="selecionar">
+                  <option value="name">Nome</option>
+                  <option value="id">ID</option>
+                  <option value="skills">Competencias</option>
+                  <option value="project">Ultimo Projeto</option>
+                  <option value="manager">Gestor</option>
+                </select>
+                <button class="input-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input [(ngModel)]="filteredname" class="input-search" id="searchbar" onkeyup="search_geral()" name="search" placeholder="Pesquisar" >
         </div>
-
-        <div class="employeeInfo">
-            <h3><b>Itau Torre 3</b></h3>
-            <h3><b>Gilberto Anderson</b></h3>
-            <h3><b>Java | .Net | MySQL</b></h3>
+        
+        <div *ngFor="let employe of employelist | filterRemark:filteredname:selected" class="container">
+            <h1 class="userName">{{employe.name}}</h1>
+        
+            <div class="infos">
+                <div class="companyInfos">
+                    <h3>Último projeto:</h3>
+                    <h3>Gestor:</h3>
+                    <h3>Especialidade:</h3>
+                </div>
+        
+                <div class="employeeInfo">
+                    <h3><b>{{employe.project.name}}</b></h3>
+                    <h3><b>{{employe.project.manager.name}}</b></h3>
+                    <h3><span *ngFor="let item of employe.skills">{{item.name}} |</span></h3>
+                </div>
+            </div>
+        
+            <div class="icons">
+                <a href="tel{{employe.phone}}"><span class="material-symbols-outlined">call</span></a>
+                <a href="mailto:{{employe.email}}"><span class="material-symbols-outlined">mail</span></a>
+                <a href="#"><span class="material-symbols-outlined" id="penEdit">edit</span></a>
+                <button (click)="newInterview(employe)" type="button" class="btn" style="background-color: rgb(199, 211, 32);">Entrevistar</button>
+            </div>
+            <hr>
         </div>
     </div>
-
-    <div class="icons">
-        <a href="#"><span class="material-symbols-outlined">call</span></a>
-        <a href="#"><span class="material-symbols-outlined">mail</span></a>
-        <a href="#"><span class="material-symbols-outlined" id="penEdit">edit</span></a>
-    </div>
-    <hr>
-</div>
